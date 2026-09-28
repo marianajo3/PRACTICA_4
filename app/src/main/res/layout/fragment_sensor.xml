@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Permite desplazar la pantalla si el contenido no entra -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <!-- Organiza los elementos uno debajo del otro -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Título de la pantalla -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Monitor del acelerómetro"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <!-- Explicación corta -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="Mueve el dispositivo para observar los valores."
+            android:textSize="16sp" />
+
+        <!-- Valor de aceleración en el eje X -->
+        <TextView
+            android:id="@+id/textViewX"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Eje X: 0.00 m/s²"
+            android:textSize="20sp" />
+
+        <!-- Valor de aceleración en el eje Y -->
+        <TextView
+            android:id="@+id/textViewY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Eje Y: 0.00 m/s²"
+            android:textSize="20sp" />
+
+        <!-- Valor de aceleración en el eje Z -->
+        <TextView
+            android:id="@+id/textViewZ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Eje Z: 0.00 m/s²"
+            android:textSize="20sp" />
+
+        <!-- Magnitud calculada utilizando los tres ejes -->
+        <TextView
+            android:id="@+id/textViewMagnitud"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Magnitud: 0.00 m/s²"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Resultado obtenido después de procesar los valores -->
+        <TextView
+            android:id="@+id/textViewEstadoSensor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Esperando datos del sensor..."
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>

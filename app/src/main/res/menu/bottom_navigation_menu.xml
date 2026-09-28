@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Menú utilizado por el BottomNavigationView -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Abre el fragment de inicio -->
+    <item
+        android:id="@+id/menuInicio"
+        android:icon="@android:drawable/ic_menu_view"
+        android:title="Inicio" />
+
+    <!-- Abre el fragment que utiliza el acelerómetro -->
+    <item
+        android:id="@+id/menuSensor"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="Sensor" />
+
+    <!-- Abre el fragment con el RecyclerView -->
+    <item
+        android:id="@+id/menuUsuarios"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="Usuarios" />
+
+</menu>

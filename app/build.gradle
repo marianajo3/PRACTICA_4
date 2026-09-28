@@ -1,0 +1,65 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.example.practicalab4'
+
+    compileSdk {
+        version = release(37)
+    }
+
+    defaultConfig {
+        applicationId "com.example.practicalab4"
+        minSdk 34
+        targetSdk 37
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    buildTypes {
+        release {
+            optimization {
+                enable false
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation libs.activity.ktx
+    implementation libs.appcompat
+    implementation libs.constraintlayout
+    implementation libs.material
+
+    // RecyclerView para mostrar listas
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+
+    // Retrofit para conectarnos con la API
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
+    // Convierte las respuestas JSON en objetos Java
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    // Pruebas
+    testImplementation libs.junit
+    androidTestImplementation libs.espresso.core
+    androidTestImplementation libs.ext.junit
+
+    //viewBinding true: conecta Java con los elementos XML.
+    //RecyclerView: permite mostrar listas.
+    //Retrofit: realiza consultas por Internet.
+    //Gson: convierte el JSON recibido en objetos Java.
+    //Material: permite usar componentes como BottomNavigationView y tarjetas.
+}
